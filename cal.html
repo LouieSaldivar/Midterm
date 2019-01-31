@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Basic Calculator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+</head>
+<body>
+
+	<div> 
+         <table border="5">
+         <tr>
+         	<td colspan="4"><input type="text" style="width: 80" id="showtext"></td>
+         </tr>
+          <tr>
+         	<td colspan="4"><input type="text" style="width: 80" id="result"></td>
+         </tr>
+
+         </tr>
+         	<td onclick="add(1)"><button style ="width: 80px">1</button></td>
+         	<td onclick="add(2)"><button style ="width: 80px">2</button></td>
+         	<td onclick="add(3)"><button style ="width: 80px">3</button></td>
+         </tr>
+
+          </tr>
+         	<td onclick="add(4)"><button style ="width: 80px">4</button></td>
+         	<td onclick="add(5)"><button style ="width: 80px">5</button></td>
+         	<td onclick="add(6)"><button style ="width: 80px">6</button></td>
+         </tr>
+
+          </tr>
+         	<td onclick="add(7)"><button style ="width: 80px">7</button></td>
+         	<td onclick="add(8)"><button style ="width: 80px">8</button></td>
+         	<td onclick="add(9)"><button style ="width: 80px">9</button></td>
+         </tr>
+
+          </tr>
+         	<td onclick="add('+')"><button style ="width: 80px">+</button></td>
+         	<td onclick="add('-')"><button style ="width: 80px">-</button></td>
+         	<td onclick="add('*')"><button style ="width: 80px">*</button></td>
+         </tr>
+
+          </tr>
+         	<td onclick="add('/')"><button style ="width: 80px">/</button></td>
+         	<td onclick="add('%')"><button style ="width: 80px">%</button></td>
+         	<td onclick="calculate()"><button style ="width: 80px">=</button></td>
+         </tr>
+
+         <tr>
+         	 <td onclick="add(.)"><button style ="width: 80px">.</button></td>
+         	 <td onclick="reset()"><button style ="width: 80px">Clear</button></td>
+         </tr>
+        
+
+     </table>
+     
+</body>
+</html>
+<script>
+	
+		function add(char) {
+			var showtext = document.getElementById('showtext');
+			showtext.value = showtext.value +char
+		}
+		function subtract(char) {
+			var showtext = document.getElementById('showtext');
+			showtext.value = showtext.value -char
+		function multiply(char) {
+			var showtext = document.getElementById('showtext');
+			showtext.value = showtext.value *char
+		}
+		function divide(char) {
+			var showtext = document.getElementById('showtext');
+			showtext.value = showtext.value /char
+		}
+		}
+		function calculate() {
+			var showtext = document.getElementById('showtext');
+			var result = eval(showtext.value);
+			document.getElementById('result').value = result;
+		}
+		function reset() {
+			document.getElementById('showtext').value ="";
+			document.getElementById('result').value ="";
+		}
+
+</script>

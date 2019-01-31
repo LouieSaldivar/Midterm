@@ -1,0 +1,22 @@
+button {
+	width: 30px;
+	padding: 10px;
+	font-size: 22px;
+	border-radius: 5px;
+	background: gray;
+}
+
+#showtext {
+	width: 230px;
+	padding: 15px;
+	font-size: 22px;
+}
+
+#result{
+	width: 230px;
+	padding: 15px;
+	font-size: 22px;
+}
+input:focus{
+	outline: none;
+}
